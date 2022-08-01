@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.Studao">
+<resultMap type="com.po.Student" id="student">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="phone" column="phone" />
+		<result property="adress" column="adress" />
+	</resultMap>
+	
+	<!--查询全部  -->
+	<select id="selectAllStu" resultMap="student">
+		select * from tb_student;
+	</select>
+	
+	<!--根据id查询  -->
+	<select id="SelStudentById" resultMap="student">
+		select * from tb_student where id = #{id};
+	</select>
+	
+	<!--根据id删除  -->
+	<delete id="DelStuId">
+		delete from tb_student where id = #{id};
+	</delete>
+	
+	<!--新增  -->
+	<insert id="insertStudent">
+	insert into tb_student(name,phone,adress) 
+	values(#{name},#{phone},#{adress});
+	</insert>
+	
+	<!-- 修改 -->
+	<update id="updateStuid">
+	UPDATE tb_student
+		SET name = #{name},
+		phone = #{phone},
+		adress = #{adress}
+		WHERE
+		id=#{id};
+	</update>
+	
+	</mapper>
