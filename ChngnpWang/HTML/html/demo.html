@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device,initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible"content="image/emf=edge">
+    <title>欢迎界面</title>
+  <style>
+    #app{
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <fieldset>
+      <Legend>Welcome to you</Legend>
+      <p>
+        <label for="textFirstName">姓：</label>
+        <input type="text"id="textFirstName"v-model="firstName">
+      </p>
+      <p>
+        <label for="textLastName">名：</label>
+        <input type="text"id="textLastName"v-model="lastName">
+      </p>
+    </fieldset>
+    <p>
+      欢迎您！<!--{{firstName+lastName}}-->
+    </p>
+  </div>
+  <script src="js/vue.min.js"></script>
+  <script>
+    var user={
+      firstName:"",
+      lastName:""
+    };
+    var vm=new Vue({
+      el:"#app",
+      data:user
+    })
+  </script>
+</body>
+</html>
