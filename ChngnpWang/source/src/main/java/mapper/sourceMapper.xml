@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--映射文件DTD约束头-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="dao.sourceMapper">
+    <!--查询所有-->
+    <select id="findAll" resultType="model.source">
+    	select * from tb_source
+    </select>
+    
+    <!--删除-->
+   <delete id="delById" parameterType="java.lang.Integer">
+   		delete from tb_source where
+   		<where>
+   			<if test="id!=null and id!=''">
+   				id=#{id}
+   			</if>
+   		</where>		
+   </delete>
+   <!--迷糊查询-->
+   <select id="queryByName" parameterType="java.lang.String" resultType="model.source"> 
+   		select * from tb_source  
+   		<where>
+   			<if test="name==null and name==''">
+   				select * from tb_source
+   			</if>
+   			<if test="name!=null and name!=''">
+   				and name like concat('%',#{name},'%')
+   			</if>
+   		</where>
+   </select>
+    <insert id="addSource">
+    	insert into tb_source values(#{id},#{name},#{type},#{buyDate},#{price})
+    </insert>
+</mapper>
