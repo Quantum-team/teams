@@ -1,0 +1,102 @@
+*{
+	/* 初始化 */
+	margin: 0;
+	padding: 0;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color:#00034b ;
+}
+.container .ghost{
+	/* 相对定位 */
+	position: relative;
+	width: 150px;
+	height: 225px;
+	/* 边宽圆角 */
+	border-radius: 75px 75px 0 0;
+	background-color: #fff;
+	/* 盒子阴影 */
+	box-shadow: -17px 0 0 #bdbdbd inset,0 0 50px #5959bd;
+	animation:ghost 2s infinite ;
+}
+.container .ghost .ghostEyes{
+	display: flex;
+	justify-content: space-around;
+	width: 90px;
+	padding-top: 70px;
+	margin: 0 auto;
+}
+/* 眼睛 */
+.container .ghost .ghostEyes::before,
+.container .ghost .ghostEyes::after{
+	content: "";
+	width: 15px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: #00034b;
+}
+/* 腮红 */
+.container .ghost .ghostDimplest{
+	display: flex;
+	justify-content: space-around;
+	width: 130px;
+	padding-top: 15px;
+	margin: 0 auto;
+}
+.container .ghost .ghostDimplest::before,
+.container .ghost .ghostDimplest::after{
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-color: #ffbeff;
+	border-radius: 50%;
+	}
+	/* 脚 */
+.container .ghost .ghostFeet{
+	display: flex;
+	position: absolute;
+	bottom: -13px;
+	width: 100%;
+}
+.container .ghost .ghostFeet .ghostFoot{
+	width: 25%;
+	height: 26px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+/* 背景渐变实现阴影 */
+.container .ghost .ghostFeet .ghostFoot:last-child{
+	background-image: linear-gradient(to right,#fff 55%,#bdbdbd 56%);
+}
+.container .shadom{
+	width: 150px;
+	height: 40px;
+	border: 1px solid dimgrey;
+	margin-top: 50px;
+	border-radius: 50%;
+	background-color: #000232;
+	animation:shadow 2s infinite ;
+}
+/* 漂浮动画 */
+@keyframes ghost{
+	0%,
+	100%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(-20px);
+	}
+}
+/* 阴影动画 */
+@keyframes shadow {
+	0%,
+	100%{
+		transform:scale(1);
+	}
+	50%{
+		transform: scale(0.9);
+	}
+}
