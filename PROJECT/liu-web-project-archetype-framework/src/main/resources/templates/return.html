@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!--
+ * @author 刘老师
+ *
+ * - 源码请所有同学合理使用，禁止非学习用途。
+ * - 参照源码多想多练多Debug，杜绝无脑Copy！
+ * - 有问题找学委统一汇总，课堂答疑，也可到办公室问我。
+ * - 小红书|微信视频号 @老刘编程 三连到位，禁止下次一定！
+ -->
+ 
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 th:text="${result}"></h1>
+	<h2 th:text="返回参数列表，支付成功后由平台回调提供的主要信息，释义见支付宝官方API。"></h2>
+	<h2 th:text="如果成功见到这个页面，恭喜同学们支付接口测试通过！"></h2>
+	<h2 th:text="这个页面自由装饰成你的支付成功页面。"></h2>
+	<p>——</p>
+	<p th:text="'out_trade_no : ' + ${out_trade_no}" ></p>
+	<p th:text="'trade_no : ' + ${trade_no}" ></p>
+	<p th:text="'method : ' + ${method}" ></p>
+	<p th:text="'auth_app_id : ' + ${auth_app_id}" ></p>
+	<p th:text="'app_id : ' + ${app_id}" ></p>
+	<p th:text="'seller_id : ' + ${seller_id}" ></p>
+	<p th:text="'timestamp : ' + ${timestamp}" ></p>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="651e53ce-4a1c-4a47-9769-fa1b6ab8a28d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/scala_compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/BDDImage2CharCases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/JavaAdvancedLibCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/JavaBasicCases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/JavaOOPCases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/JavaSparkWordCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/JavaVsScalaCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/MapReduceWordCountCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/MapReduceWordCountCase2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/cases/T.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/enums/CityEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/interfaces/BizInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/interfaces/PersonActInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/java/com/matthew/interfaces/WorkingInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/DataSampleOfExam.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/UserBehavior.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/bdd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/hive-site.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/scratch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/shell.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/resources/word-count-sample.rtfd/TXT.rtf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/CCAExamCase.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/Main.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/MapReduceWordCountByScala.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/MockBigFileCase.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/MockPoker.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/ScalaBasic.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/SparkSql2HiveCTL.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/SparkWordCount.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liu-coding-case/src/main/scala/com/matthew/cases/kaoshi.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/china/servlet/AddServlet2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/china/servlet/ListServlet2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liu/util/JDBCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liu/util/JDBCUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/suibian/dao/SuiBianDao.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2EOhDT6TME7CGRTn6J0cfJyBbip" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="651e53ce-4a1c-4a47-9769-fa1b6ab8a28d" name="Changes" comment="" />
+      <created>1662472418044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662472418044</updated>
+      <workItem from="1662472419430" duration="29000" />
+      <workItem from="1662472471482" duration="70000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

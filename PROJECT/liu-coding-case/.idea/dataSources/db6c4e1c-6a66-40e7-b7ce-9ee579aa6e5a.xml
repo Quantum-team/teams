@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.31">
+    <root id="1"/>
+    <schema id="2" parent="1" name="case">
+      <Collation>utf8_general_ci</Collation>
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="hive">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="mysql">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="6" parent="1" name="performance_schema">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="7" parent="1" name="shtd_store">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="source_db">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="9" parent="1" name="sys">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="10" parent="1" name="t_pro">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+  </database-model>
+</dataSource>

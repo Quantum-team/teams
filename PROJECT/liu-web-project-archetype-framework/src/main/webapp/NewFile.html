@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+阿里原生Web招码支付项目
+	<form name="punchout_form" method="post"
+		action="https://openapi.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=KHzgCGqVLmhAkz0Jmy8Gp%2BV%2BzABr5sm1qHen61LqSydWIfW%2FeKyN9J7mJI2hCYPWerhIkbeGGijhHEyFfQKLxuXBBACD92wf%2Fs6sWs6f8I%2F%2FUz9%2B12ubyFrT%2FhMoPF6b8TPtLJDX0PFpdK2czgLW0vQP6Ksi4wJ%2FalGft7QIDfJ%2FJOdcGgD95FLrRHqiAwnApHA7AHQ7T9DisuLs41xBsXwHRNu8cVsDrUtpeSulupgHFn9oJDt5l2UpSAE53h2F8qldmSGXSijw2InO2s1hFdzbN%2FD%2BHteCzhx%2BTELI0q%2BGC0ATE5qciKbvqKj%2BJodCynClxdz6ocOYfaymtjU08w%3D%3D&return_url=http%3A%2F%2Ftwhqgy.natappfree.cc%2Falipay.trade.page.pay-JAVA-UTF-8%2Freturn_url.jsp&notify_url=http%3A%2F%2Ftwhqgy.natappfree.cc%2Falipay.trade.page.pay-JAVA-UTF-8%2Fnotify_url.jsp&version=1.0&app_id=2021000119647649&sign_type=RSA2&timestamp=2022-04-12+19%3A56%3A49&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json">
+		<input type="hidden" name="biz_content"
+			value="{&quot;out_trade_no&quot;:&quot;2022412195641886&quot;,&quot;total_amount&quot;:&quot;0.01&quot;,&quot;subject&quot;:&quot;测试&quot;,&quot;body&quot;:&quot;&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+		<input type="submit" value="立即支付" style="display: none">
+	</form>
+
+
+	<script>
+		document.forms[0].submit();
+	</script>
+
+
+测试未通过Web支付
+	<form name="punchout_form" method="post"
+		action="https://openapi.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.wap.pay&sign=SZZ172R4DvuFUMetHt%2FqgFnmdJZZ44FSFB97B9LVAJ0uRcm6rsFcCSdkSFlhB9oo4Zkv7foszX5Grqk1%2FkTGDgsaM9wQvtV0buXWCLHlDVV44L%2FHbnFcUTc8RY8RCLKpkDganlN528gdER1B8f0laGFBSwftlbZL4yf0mVw%2B39GWS%2B2Zco586SsyiyFtZYgk6uk3cJXwIXpgCuxiSbIzGDv2YvraxwBJWFJcZoeWkTWJpI52PzNoezIgZ0ZhEvpslFhnH4qBQab8nV6kZPzeQIOiYCmbs8ZlTVWs6gv5m8QpCdy%2B6v5hdJKlYjNxi06huaHuKfslZ24WnFsihWDb7g%3D%3D&return_url=http%3A%2F%2F6b3zfg.natappfree.cc%2Fpayment%2Freturn&notify_url=http%3A%2F%2F6b3zfg.natappfree.cc%2Fpayment%2Fnotify&version=1.0&app_id=2021000119647649&sign_type=RSA2&timestamp=2022-04-12+20%3A00%3A38&alipay_sdk=alipay-sdk-java-3.3.0&format=json">
+		<input type="hidden" name="biz_content"
+			value="{&quot;out_trade_no&quot;:&quot;order_1_1649764838762&quot;,&quot;total_amount&quot;:&quot;120&quot;,&quot;subject&quot;:&quot;????&quot;,&quot;body&quot;:&quot;????&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}">
+		<input type="submit" value="????" style="display: none">
+	</form>
+	<script>
+		document.forms[0].submit();
+	</script>
+
+
+原App支付
+	<form name="punchout_form" method="post"
+		action="https://openapi.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.wap.pay&sign=QeHgH7tNSXXofEevQA8jE%2BzBPnwhAqGpZQpF4YY7dGmeSlRL91Vu1hzeWhybhckm695NpwYaNXUfH1otQt%2B2d4GyjFK4FnooblCMd62PxwwSm5GGL9cwCPyWYGrMeJEQUVD6Y0TYxeSb4f5U44dhwqL69eosu924hCgU%2BpfQOYXbEMuZ0Cbwh%2FvKzyJx2DeUCMbhk8eiU0KRLvuYfdo9BMhqdHkaPrzDR1QP%2FrlJmW7yizdS6R%2Byzj22S%2BDtQO%2Bc47cmwzSWLd2EV%2BDWMBtisYxXmXEyJffW9eSOZvqFkmlyUfKhtw6FaPdi7N08XNb3oUFANytIGn3BEDMKKBdnNg%3D%3D&return_url=http%3A%2F%2F6b3zfg.natappfree.cc%2Fpayment%2Freturn&notify_url=http%3A%2F%2F6b3zfg.natappfree.cc%2Fpayment%2Fnotify&version=1.0&app_id=2021000119647649&sign_type=RSA2&timestamp=2022-04-12+20%3A02%3A15&alipay_sdk=alipay-sdk-java-3.3.0&format=json">
+		<input type="hidden" name="biz_content"
+			value="{&quot;body&quot;:&quot;测试商品描述&quot;,&quot;out_trade_no&quot;:&quot;order_1_1649764935398&quot;,&quot;product_code&quot;:&quot;QUICK_WAP_WAY&quot;,&quot;subject&quot;:&quot;测试订单&quot;,&quot;timeout_express&quot;:&quot;2m&quot;,&quot;total_amount&quot;:&quot;120&quot;}">
+		<input type="submit" value="立即支付" style="display: none">
+	</form>
+	<script>
+		document.forms[0].submit();
+	</script>
+
+
+</body>
+</html>

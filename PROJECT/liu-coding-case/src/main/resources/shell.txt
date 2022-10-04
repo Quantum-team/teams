@@ -1,0 +1,19 @@
+hdfs dfs -rm -r /tmp/output
+
+export HADOOP_ROOT_LOGGER="INFO,console"
+export HADOOP_ROOT_LOGGER="DEBUG,console"
+
+export HADOOP_OPTS="-Xmx10240m"
+
+hadoop jar \
+/Users/sasaki/gogs/liu-coding/liu-coding-case/target/liu-coding-case-1.0-SNAPSHOT.jar \
+com.matthew.cases.MapReduceWordCountCase \
+/tmp/input_10m \
+/tmp/output \
+-Dmapred.child.java.opts=-Xmx4096m \
+-Dmapreduce.map.memory.mb=512 \
+-Dmapreduce.reduce.memory.mb=512
+
+hdfs dfs -tail /tmp/output/part-r-00000
+
+./bin/spark-shell --master local[2] --jars /Users/sasaki/.m2/repository/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar

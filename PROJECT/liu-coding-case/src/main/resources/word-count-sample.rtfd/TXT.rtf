@@ -1,0 +1,2717 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red26\green23\blue24;\red24\green82\blue167;
+\red129\green131\blue134;\red174\green175\blue179;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c13725\c12157\c12549;\cssrgb\c10980\c40784\c71373;
+\cssrgb\c57647\c58431\c59608;\cssrgb\c73725\c74118\c75294;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Version:0.9 StartHTML:0000000105 EndHTML:0000087741 StartFragment:0000000141 EndFragment:0000087701\
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 47 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 of an 
+\fs24 if
+\fs29\fsmilli14667  statement is self-explanatory: the statement(s) in the sequence are to be 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 executed if and only if the expression is 
+\fs24 true
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 As a simple example, suppose that you want to compute the absolute value of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 an 
+\fs24 int
+\fs29\fsmilli14667  value 
+\fs24 x
+\fs29\fsmilli14667 . This statement does the job: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 if (x < 0) x = -x; \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 As a second simple example, consider the following statement: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 if (x > y) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 int t = x; \cf2 \strokec2 \
+\cf3 \strokec3 x = y; \cf2 \strokec2 \
+\cf3 \strokec3 y = t; \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 This code puts 
+\fs24 x
+\fs29\fsmilli14667  and 
+\fs24 y
+\fs29\fsmilli14667  in ascending order by exchanging them if 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 necessary. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 You can also add an 
+\fs24 else
+\fs29\fsmilli14667  clause to an 
+\fs24 if
+\fs29\fsmilli14667  statement, to express the concept of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 executing either one statement (or sequence of statements) or another, depending 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 on whether the boolean expression is 
+\fs24 true
+\fs29\fsmilli14667  or 
+\fs24 false
+\fs29\fsmilli14667 , as in the following template: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 if (<boolean expression>) <statements T> \cf2 \strokec2 \
+\cf3 \strokec3 else <statements F> \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 As a simple example of the need for an 
+\fs24 else
+\fs29\fsmilli14667  clause, consider the following code, 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 which assigns the maximum of two 
+\fs24 int
+\fs29\fsmilli14667  values to the variable 
+\fs24 max
+\fs29\fsmilli14667 : 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 if (x > y) max = x; \cf2 \strokec2 \
+\cf3 \strokec3 else max = y; \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 One way to understand control flflow is to visualize it with a diagram called a flflow
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 chart. Paths through the flflowchart correspond to flflow-of-control paths in the pro
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 x > y ? 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 max = x; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 if (x > y) max = x; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 else max = y; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Flowchart examples (
+\fs21\fsmilli10667 if
+\fs26\fsmilli13333  statements) 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 yes no 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 max = y; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 if (x < 0) x = -x; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 boolean 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 expression 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Anatomy of an 
+\fs21\fsmilli10667 if 
+\fs26\fsmilli13333 statement 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 if ( x > y ) 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 sequence 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 of 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 statements 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 int t = x; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 x = y; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 y = t; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,-1 ./01/23,,,0425,67 
+\f0\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 x < 0 ? \cf4 \strokec4 yes no 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 x = -x;
+\f1\b\fs24 48 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 gram. In the early days of computing, when programmers used low-level languages 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 and diffificult-to-understand flflows of control, flflowcharts were an essential part of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 programming. With modern languages, we use flflowcharts just to understand basic 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 building blocks like the 
+\fs24 if
+\fs29\fsmilli14667  statement. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 The accompanying table contains some examples of the use of 
+\fs24 if
+\fs29\fsmilli14667  and 
+\fs24 if\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 else
+\fs29\fsmilli14667  statements. These examples are typical of simple calculations you might need 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 in programs that you write. Conditional statements are an essential part of pro
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 gramming. Since the semantics (meaning) of statements like these is similar to their 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 meanings as natural-language phrases, you will quickly grow used to them. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.1 is another example of the use of the 
+\fs24 if-else
+\fs29\fsmilli14667  statement, in 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 this case for the task of simulating a coin flflip. The body of the program is a single 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 statement, like the ones in the table above, but it is worth special attention because 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 it introduces an interesting philosophical issue that is worth contemplating: can a 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 computer program produce random values? Certainly not, but a program can pro
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 duce numbers that have many of the properties of random numbers. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 absolute value 
+\fs21\fsmilli10667 \cf3 \strokec3 if (x < 0) x = -x; 
+\fs24 \cf2 \strokec2 \
+\cf4 \strokec4 put 
+\fs21\fsmilli10667 x
+\fs24  and 
+\fs21\fsmilli10667 y 
+\fs24 \cf2 \strokec2 \
+\cf4 \strokec4 into \cf2 \strokec2 \
+\cf4 \strokec4 sorted order \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 if (x > y) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 int t = x; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 y = x; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 x = t; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 maximum of \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 x
+\fs24  and 
+\fs21\fsmilli10667 y 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 if (x > y) max = x; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 else max = y; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 error check \cf2 \strokec2 \
+\cf4 \strokec4 for division \cf2 \strokec2 \
+\cf4 \strokec4 operation \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 if (den == 0) System.out.println("Division by zero"); 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 else System.out.println("Quotient = " + num/den); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 error check \cf2 \strokec2 \
+\cf4 \strokec4 for quadratic \cf2 \strokec2 \
+\cf4 \strokec4 formula \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 double discriminant = b*b - 4.0*c; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 if (discriminant < 0.0) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println("No real roots"); 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 else 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println((-b + Math.sqrt(discriminant))/2.0); 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println((-b - Math.sqrt(discriminant))/2.0); 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Typical examples of using 
+\fs21\fsmilli10667 if
+\fs26\fsmilli13333  statements 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,-9 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 49 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Flip 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 Heads 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Flip 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 Tails 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Flip 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 Tails 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 While loops 
+\f0\b0\fs29\fsmilli14667 \cf3 \strokec3 Many computations are inherently repetitive. The basic Java con
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 struct for handling such computations has the following format: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 while (<boolean expression>) \{ <statements> \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 The 
+\fs24 while
+\fs29\fsmilli14667  statement has the same form as the 
+\fs24 if
+\fs29\fsmilli14667  statement (the only difference be
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ing the use of the keyword 
+\fs24 while
+\fs29\fsmilli14667  instead of 
+\fs24 if
+\fs29\fsmilli14667 ), but the meaning is quite different. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 It is an instruction to the computer to behave as follows: if the expression is 
+\fs24 false
+\fs29\fsmilli14667 , 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 do nothing; if the expression is 
+\fs24 true
+\fs29\fsmilli14667 , execute the sequence of statements (just as 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 with 
+\fs24 if
+\fs29\fsmilli14667 ) but then check the expression again, execute the sequence of statements 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 again if the expression is 
+\fs24 true
+\fs29\fsmilli14667 , and continue as long as the expression is 
+\fs24 true
+\fs29\fsmilli14667 . We 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 often refer to the statement block in a loop as the body of the loop. As with the 
+\fs24 if \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 statement, the braces are optional if a 
+\fs24 while
+\fs29\fsmilli14667  loop body has just one statement. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 The 
+\fs24 while
+\fs29\fsmilli14667  statement is equivalent to a sequence of identical 
+\fs24 if
+\fs29\fsmilli14667  statements: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Program 1.3.1 Flipping a fair coin 
+\f0\b0\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 public class Flip \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 public static void main(String[] args) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Simulate a coin flip. \cf2 \strokec2 \
+\cf3 \strokec3 if (Math.random() < 0.5) System.out.println("Heads"); \cf2 \strokec2 \
+\cf3 \strokec3 else System.out.println("Tails"); \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 This program uses 
+\fs21\fsmilli10667 Math.random()
+\fs26\fsmilli13333  to simulate a coin flflip. Each time you run it, it prints either 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 heads or tails. A sequence of flflips will have many of the same properties as a sequence that you 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 would get by flflipping a fair coin, but it is not a truly random sequence. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,-3 ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 50 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 if (<boolean expression>) \{ <statements> \} \cf2 \strokec2 \
+\cf3 \strokec3 if (<boolean expression>) \{ <statements> \} \cf2 \strokec2 \
+\cf3 \strokec3 if (<boolean expression>) \{ <statements> \} \cf2 \strokec2 \
+\cf3 \strokec3 ... \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 At some point, the code in one of the statements must 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 change something (such as the value of some variable in 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the boolean expression) to make the boolean expression 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 false
+\fs29\fsmilli14667 , and then the sequence is broken. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 A common programming paradigm involves main
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 taining an integer value that keeps track of the number of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 times a loop iterates. We start at some initial value, and then increment the value 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 by 1 each time through the loop, testing whether it exceeds a predetermined maxi
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 mum before deciding to continue. 
+\fs24 TenHellos \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.2) is a simple example of this para
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 digm that uses a 
+\fs24 while
+\fs29\fsmilli14667  statement. The key to the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 computation is the statement 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 i = i + 1; \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 As a mathematical equation, this statement is 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 nonsense, but as a Java assignment statement it 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 makes perfect sense: it says to compute the value 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 i + 1
+\fs29\fsmilli14667  and then assign the result to the variable 
+\fs24 i
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 If the value of 
+\fs24 i
+\fs29\fsmilli14667  was 
+\fs24 4
+\fs29\fsmilli14667  before the statement, it be
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 comes 
+\fs24 5
+\fs29\fsmilli14667  afterwards; if it was 
+\fs24 5
+\fs29\fsmilli14667  it becomes 
+\fs24 6
+\fs29\fsmilli14667 ; and 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 so forth. With the initial condition in 
+\fs24 TenHellos \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 that the value of 
+\fs24 i
+\fs29\fsmilli14667  starts at 
+\fs24 4
+\fs29\fsmilli14667 , the statement block 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 is executed fifive times until the sequence is bro
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ken, when the value of 
+\fs24 i
+\fs29\fsmilli14667  becomes 
+\fs24 11
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Using the 
+\fs24 while
+\fs29\fsmilli14667  loop is barely worthwhile for this simple task, but you will 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 soon be addressing tasks where you will need to specify that statements be repeated 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 far too many times to contemplate doing it without loops. There is a profound 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 difference between programs with 
+\fs24 while
+\fs29\fsmilli14667  statements and programs without them, 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 because 
+\fs24 while
+\fs29\fsmilli14667  statements allow us to specify a potentially unlimited number of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 statements to be executed in a program. In particular, the 
+\fs24 while
+\fs29\fsmilli14667  statement allows 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 us to specify lengthy computations in short programs. This ability opens the door 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 to writing programs for tasks that we could not contemplate addressing without a 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 int i = 4; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 while (i <= 10) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(i + "th Hello"); 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 i = i + 1; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Flowchart example (while statement) 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 i <= 10 ? 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9253 \cf3 \strokec3 i = 4; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf4 \strokec4 no 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf4 \strokec4 yes 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 System.out.println(i + "th Hello"); 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf3 \strokec3 i = i + 1; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 loop 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 continuation 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 condition 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Anatomy of a 
+\fs21\fsmilli10667 while 
+\fs26\fsmilli13333 loop 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 initialization is a 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 separate statement 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf6 \strokec6 int v = 1; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 while ( v <= N/2 ) 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 braces are 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 optional 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 when body 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 is a single 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 statement 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 body 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 v = 2*v; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,52 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 51 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java TenHellos 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1st Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2nd Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3rd Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 4th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 5th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 6th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 7th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 8th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 9th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 10th Hello 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Program 1.3.2 Your fifirst while loop 
+\f0\b0\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 public class TenHellos \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 public static void main(String[] args) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print 10 Hellos. \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println("1st Hello"); \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println("2nd Hello"); \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println("3rd Hello"); \cf2 \strokec2 \
+\cf3 \strokec3 int i = 4; \cf2 \strokec2 \
+\cf3 \strokec3 while (i <= 10) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print the ith Hello. \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println(i + "th Hello"); \cf2 \strokec2 \
+\cf3 \strokec3 i = i + 1; \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 This program uses a 
+\fs21\fsmilli10667 while
+\fs26\fsmilli13333  loop for the simple, repetitive task of printing the output shown 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 below. After the third line, the lines to be printed differ only in the value of the index counting 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 the line printed, so we defifine a variable 
+\fs21\fsmilli10667 i
+\fs26\fsmilli13333  to contain that index. After initializing the value of 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 i
+\fs26\fsmilli13333  to 
+\fs21\fsmilli10667 4
+\fs26\fsmilli13333 , we enter into a 
+\fs21\fsmilli10667 while
+\fs26\fsmilli13333  loop where we use the value of 
+\fs24 i
+\fs26\fsmilli13333  in the 
+\fs21\fsmilli10667 System.out.println() 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 statement and increment it each time through the loop. After printing 
+\fs21\fsmilli10667 10th Hello
+\fs26\fsmilli13333 , the value 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 of 
+\fs21\fsmilli10667 i
+\fs26\fsmilli13333  becomes 
+\fs21\fsmilli10667 11
+\fs26\fsmilli13333  and the loop terminates. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 i i <= 10 
+\fs24 \cf4 \strokec4 output \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 4 true 4th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 5 true 5th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 6 true 6th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 7 true 7th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 8 true 8th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 9 true 9th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 10 true 10th Hello 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 11 false 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Trace of 
+\fs21\fsmilli10667 java TenHellos 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,5: ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 52 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 computer. But there is also a price to pay: as your pro
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 grams become more sophisticated, they become more 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 diffificult to understand. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 PowersOfTwo
+\fs29\fsmilli14667  (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.3) uses a 
+\fs24 while
+\fs29\fsmilli14667  loop 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 to print out a table of the powers of 2. Beyond the loop 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 control counter 
+\fs24 i
+\fs29\fsmilli14667 , it maintains a variable 
+\fs24 v
+\fs29\fsmilli14667  that holds 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the powers of two as it computes them. The loop body 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 contains three statements: one to print the current 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 power of 2, one to compute the next (multiply the cur
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 rent one by 2), and one to increment the loop control 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 counter. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 There are many situations in computer science 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 where it is useful to be familiar with powers of 2. You 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 should know at least the fifirst 10 values in this table 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 and you should note that 2
+\fs19\fsmilli9680 10
+\fs29\fsmilli14667  is about 1 thousand, 2
+\fs19\fsmilli9680 20
+\fs29\fsmilli14667  is 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 about 1 million, and 2
+\fs19\fsmilli9680 30
+\fs29\fsmilli14667  is about 1 billion. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 PowersOfTwo
+\fs29\fsmilli14667  is the prototype for many use
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 ful computations. By varying the computations that 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 change the accumulated value and the way that the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 loop control variable is incremented, we can print out 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 tables of a variety of functions (see E
+\fs20\fsmilli10267 XERCISE
+\fs29\fsmilli14667  1.3.11). 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 It is worthwhile to carefully examine the behav
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ior of programs that use loops by studying a trace of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the program. For example, a trace of the operation of 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 PowersOfTwo
+\fs29\fsmilli14667  should show the value of each variable 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 before each iteration of the loop and the value of the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 conditional expression that controls the loop. Trac
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ing the operation of a loop can be very tedious, but it 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 is nearly always worthwhile to run a trace because it 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 clearly exposes what a program is doing. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 PowersOfTwo
+\fs29\fsmilli14667  is nearly a self-tracing program, 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 because it prints the values of its variables each time 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 through the loop. Clearly, you can make any program 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 produce a trace of itself by adding appropriate 
+\fs24 System. \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 out.println()
+\fs29\fsmilli14667  statements. Modern programming en
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 vironments provide sophisticated tools for tracing, but 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 i v i <= N 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 0 1 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 2 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 4 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3 8 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 4 16 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 5 32 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 6 64 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 7 128 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 8 256 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 9 512 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 10 1024 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 11 2048 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 12 4096 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 13 8192 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 14 16384 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 15 32768 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 16 65536 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 17 131072 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 18 262144 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 19 524288 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 20 1048576 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 21 2097152 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 22 4194304 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 23 8388608 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 24 16777216 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 25 33554432 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 26 67108864 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 27 134217728 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 28 268435456 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 29 536870912 true 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 30 1073741824 false 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Trace of 
+\fs21\fsmilli10667 java PowersOfTwo 29 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,50 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 53 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 this tried-and-true method is simple and effective. You certainly should add print 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 statements to the fifirst few loops that you write, to be sure that they are doing pre
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 cisely what you expect. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 There is a hidden trap in 
+\fs24 PowersOfTwo
+\fs29\fsmilli14667 , because the largest integer in Java\'e2\'80\'99s 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 int
+\fs29\fsmilli14667  data type is 2
+\fs19\fsmilli9680 31 
+\fs29\fsmilli14667 - 1 and the program does not test for that possibility. If you 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java PowersOfTwo 29 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 0 1 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 4 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 ... 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 27 134217728 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 28 268435456 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 29 536870912 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java PowersOfTwo 5 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 0 1 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 4 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3 8 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 4 16 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 5 32 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Program 1.3.3 Computing powers of two 
+\f0\b0\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 public class PowersOfTwo \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 public static void main(String[] args) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print the first N powers of 2. \cf2 \strokec2 \
+\cf3 \strokec3 int N = Integer.parseInt(args[0]); \cf2 \strokec2 \
+\cf3 \strokec3 int v = 1; \cf2 \strokec2 \
+\cf3 \strokec3 int i = 0; \cf2 \strokec2 \
+\cf3 \strokec3 while (i <= N) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print ith power of 2. \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println(i + " " + v); \cf2 \strokec2 \
+\cf3 \strokec3 v = 2 * v; \cf2 \strokec2 \
+\cf3 \strokec3 i = i + 1; \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 This program takes a command-line argument 
+\fs21\fsmilli10667 N
+\fs26\fsmilli13333  and prints a table of the powers of 2 that are 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 less than or equal to 2
+\fs17\fsmilli8800 N
+\fs26\fsmilli13333 . Each time through the loop, we increment the value of 
+\fs24 i
+\fs26\fsmilli13333  and double 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 the value of 
+\fs21\fsmilli10667 v
+\fs26\fsmilli13333 . We show only the fifirst three and the last three lines of the table; the program 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 prints 
+\fs21\fsmilli10667 N+1
+\fs26\fsmilli13333  lines. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 N 
+\fs24 \cf4 \strokec4 loop termination value \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 i 
+\fs24 \cf4 \strokec4 loop control counter \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 v 
+\fs24 \cf4 \strokec4 current power of 2 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,5. ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 54 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 invoke it with 
+\fs24 java PowersOfTwo 31
+\fs29\fsmilli14667 , you may be surprised by the last line of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 output: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 ... \cf2 \strokec2 \
+\cf3 \strokec3 1073741824 \cf2 \strokec2 \
+\cf3 \strokec3 -2147483648 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 The variable 
+\fs24 v
+\fs29\fsmilli14667  becomes too large and takes on a negative value because of the way 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Java represents integers. The maximum value of an 
+\fs24 int
+\fs29\fsmilli14667  is available for us to use as 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 Integer.MAX_VALUE
+\fs29\fsmilli14667 . A better version of P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.3 would use this value to test 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 for overflflow and print an error message if the user types too large a value, though 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 getting such a program to work properly for all inputs is trickier than you might 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 think. (For a similar challenge, see E
+\fs20\fsmilli10267 XERCISE
+\fs29\fsmilli14667  1.3.14.) 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 As a more complicated example, suppose that we 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 want to compute the largest power of two that is less 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 than or equal to a given positive integer 
+\fs24 N
+\fs29\fsmilli14667 . If 
+\fs24 N
+\fs29\fsmilli14667  is 
+\fs24 13
+\fs29\fsmilli14667  we 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 want the result 
+\fs24 8
+\fs29\fsmilli14667 ; if 
+\fs24 N
+\fs29\fsmilli14667  is 
+\fs24 1000
+\fs29\fsmilli14667 , we want the result 
+\fs24 512
+\fs29\fsmilli14667 ; if 
+\fs24 N \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 is 
+\fs24 64
+\fs29\fsmilli14667 , we want the result 
+\fs24 64
+\fs29\fsmilli14667 ; and so forth. This computa
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 tion is simple to perform with a 
+\fs24 while
+\fs29\fsmilli14667  loop: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 int v = 1; \cf2 \strokec2 \
+\cf3 \strokec3 while (v <= N/2) \cf2 \strokec2 \
+\cf3 \strokec3 v = 2*v; \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 It takes some thought to convince yourself that this sim
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ple piece of code produces the desired result. You can do 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 so by making these observations: 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 s
+\fs24 v
+\fs29\fsmilli14667  is always a power of 
+\fs24 2
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 s
+\fs24 v
+\fs29\fsmilli14667  is never greater than 
+\fs24 N
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 s
+\fs24 v
+\fs29\fsmilli14667  increases each time through the loop, so the loop 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 must terminate. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 sAfter the loop terminates, 
+\fs24 2*v
+\fs29\fsmilli14667  is greater than 
+\fs24 N
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Reasoning of this sort is often important in understanding how 
+\fs24 while
+\fs29\fsmilli14667  loops work. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Even though many of the loops you will write are much simpler than this one, you 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 should be sure to convince yourself that each loop you write is going to behave as 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 you expect. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 The logic behind such arguments is the same whether the loop iterates just 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 a few times, as in 
+\fs24 TenHellos
+\fs29\fsmilli14667 , dozens of times, as in 
+\fs24 PowersOfTwo
+\fs29\fsmilli14667 , or millions of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 times, as in several examples that we will soon consider. That leap from a few tiny 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 cases to a huge computation is profound. When writing loops, understanding how 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 v <= N/2 ? 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 int v = 1; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 int v = 1; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 while (v <= N/2) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 v = 2*v; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Flowchart for the statements 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 no 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 yes 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 v = 2*v; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,5- ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 55 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 the values of the variables change each time through the loop (and checking that 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 understanding by adding statements to trace their values and running for a small 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 number of iterations) is essential. Having done so, you can confifidently remove 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 those training wheels and truly unleash the power of the computer. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 For loops 
+\f0\b0\fs29\fsmilli14667 \cf3 \strokec3 As you will see, the 
+\fs24 while
+\fs29\fsmilli14667  loop allows us to write programs for all 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 manner of applications. Before considering more examples, we will look at an al
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ternate Java construct that allows us even more flflexibility when writing programs 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 with loops. This alternate notation is not fundamentally different from the basic 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 while
+\fs29\fsmilli14667  loop, but it is widely used because it often allows us to write more compact 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 and more readable programs than if we used only 
+\fs24 while
+\fs29\fsmilli14667  statements. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \strokec4 For notation. 
+\fs29\fsmilli14667 \cf3 \strokec3 Many loops follow this scheme: initialize an index variable to some 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 value and then use a 
+\fs24 while
+\fs29\fsmilli14667  loop to test a loop continuation condition involving 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the index variable, where the last statement in the 
+\fs24 while
+\fs29\fsmilli14667  loop increments the index 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 variable. You can express such loops directly with Java\'e2\'80\'99s 
+\fs24 for
+\fs29\fsmilli14667  notation: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 for (<initialize>; <boolean expression>; <increment>) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 <statements> \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 This code is, with only a few exceptions, equivalent to 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 <initialize>; \cf2 \strokec2 \
+\cf3 \strokec3 while (<boolean expression>) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 <statements> \cf2 \strokec2 \
+\cf3 \strokec3 <increment>; \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 Your Java compiler might even produce identical results for the two loops. In truth, 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 <initialize>
+\fs29\fsmilli14667  and 
+\fs24 <increment>
+\fs29\fsmilli14667  can be any statements at all, but we nearly always 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 use 
+\fs24 for
+\fs29\fsmilli14667  loops to support this typical initialize-and-increment programming idiom. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 For example, the following two lines of code are equivalent to the corresponding 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 lines of code in 
+\fs24 TenHellos
+\fs29\fsmilli14667  (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.2): 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 for (int i = 4; i <= 10; i = i + 1) \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println(i + "th Hello"); \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,55 ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 56 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 Typically, we work with a slightly more compact version of this code, using the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 shorthand notation discussed next. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \strokec4 Compound assignment idioms. 
+\fs29\fsmilli14667 \cf3 \strokec3 Modifying the value of a variable is something 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 that we do so often in programming that Java provides a variety of different short
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 hand notations for the purpose. For example, the following four statements all in
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 crement the value of 
+\fs24 i
+\fs29\fsmilli14667  by 
+\fs24 1
+\fs29\fsmilli14667  in Java: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 i = i + 1; i++; ++i; i += 1; \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 You can also say 
+\fs24 i--
+\fs29\fsmilli14667  or 
+\fs24 --i
+\fs29\fsmilli14667  or 
+\fs24 i -= 1
+\fs29\fsmilli14667  or 
+\fs24 i = i-1
+\fs29\fsmilli14667  to decrement that value of 
+\fs24 i
+\fs29\fsmilli14667  by 1. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Most programmers use 
+\fs24 i++
+\fs29\fsmilli14667  or 
+\fs24 i--
+\fs29\fsmilli14667  in 
+\fs24 for
+\fs29\fsmilli14667  loops, though any of the others would do. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 The 
+\fs24 ++
+\fs29\fsmilli14667  and 
+\fs24 --
+\fs29\fsmilli14667  constructs are normally used for integers, but the compound assign
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ment constructs are useful operations for any arithmetic operator in any primitive 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 numeric type. For example, you can say 
+\fs24 v *= 2
+\fs29\fsmilli14667  or 
+\fs24 v += v
+\fs29\fsmilli14667  instead of 
+\fs24 v = 2*v
+\fs29\fsmilli14667 . All 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 of these idioms are for notational convenience, nothing more. This combination of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 shortcuts came into widespread use with the C programming language in the 1970s 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 and have become standard. They have survived the test of time because they lead to 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 compact, elegant, and easily understood programs. When you learn to write (and 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 to read) programs that use them, you will be able to transfer that skill to program
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ming in numerous modern languages, not just Java. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \strokec4 Scope. 
+\fs29\fsmilli14667 \cf3 \strokec3 The scope of a variable is the part of the program where it is defifined. Gen
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 erally the scope of a variable is comprised of the statements that follow the decla
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ration in the same block as the declaration. For this purpose, the code in the 
+\fs24 for \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 loop header is considered to be in the same block as the 
+\fs24 for
+\fs29\fsmilli14667  loop body. Therefore, 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the 
+\fs24 while
+\fs29\fsmilli14667  and 
+\fs24 for
+\fs29\fsmilli14667  formulations of loops are not quite equivalent: in a typical 
+\fs24 for \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 loop, the incrementing variable is not available for use in later statements; in the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 corresponding 
+\fs24 while
+\fs29\fsmilli14667  loop, it is. This distinction is often a reason to use a 
+\fs24 while \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 instead of a 
+\fs24 for
+\fs29\fsmilli14667  loop. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 C
+\fs20\fsmilli10267 HOOSING AMONG DIFFERENT FORMULATIONS OF THE 
+\fs29\fsmilli14667 same computation is a matter of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 each programmer\'e2\'80\'99s taste, as when a writer picks from among synonyms or chooses 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 between using active and passive voice when composing a sentence. You will not 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 fifind good hard-and-fast rules on how to compose a program any more than you 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 will fifind such rules on how to compose a paragraph. Your goal should be to fifind a 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 style that suits you, gets the computation done, and can be appreciated by others. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,58 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 57 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 The accompanying table includes 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 several code fragments with typical 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 examples of loops used in Java code. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Some of these relate to code that you 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 have already seen; others are new code 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 for straightforward computations. To 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 cement your understanding of loops 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 in Java, put these code snippets into a 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 class\'e2\'80\'99s code that takes an integer 
+\fs24 N
+\fs29\fsmilli14667  from 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the command line (like 
+\fs24 PowersOfTwo
+\fs29\fsmilli14667 ) 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 and compile and run them. Then, write 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 some loops of your own for similar computations of your own invention, or do 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 some of the early exercises at the end of this section. There is no substitute for the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 experience gained by running code that you create yourself, and it is imperative 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 that you develop an understanding of how to write Java code that uses loops. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 print largest power of two \cf2 \strokec2 \
+\cf4 \strokec4 less than or equal to N \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 int v = 1; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 while (v <= N/2) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 v = 2*v; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(v); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 compute a fifinite sum \cf2 \strokec2 \
+\cf4 \strokec4 (1 + 2 + . . . + N) \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 int sum = 0; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 for (int i = 1; i <= N; i++) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 sum += i; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(sum); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 compute a fifinite product \cf2 \strokec2 \
+\cf4 \strokec4 (N! = 1 \'c3\'97 2 \'c3\'97 . . . \'c3\'97 N) \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 int product = 1; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 for (int i = 1; i <= N; i++) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 product *= i; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(product); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 print a table of \cf2 \strokec2 \
+\cf4 \strokec4 function values \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 for (int i = 0; i <= N; i++) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(i + " " + 2*Math.PI*i/N); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 print the ruler function \cf2 \strokec2 \
+\cf4 \strokec4 (see Program 1.2.1) \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 String ruler = " "; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 for (int i = 1; i <= N; i++) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 ruler = ruler + i + ruler; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(ruler); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Typical examples of using 
+\fs18\fsmilli9333 for
+\fs26\fsmilli13333  and 
+\fs18\fsmilli9333 while
+\fs26\fsmilli13333  statements 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 loop 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 continuation 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 condition 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Anatomy of a 
+\fs21\fsmilli10667 for
+\fs26\fsmilli13333  loop (that prints powers of 2) 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 initialize another 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 variable in a 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 separate 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 statement 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 declare and initialize 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 a loop control variable 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 increment 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf6 \strokec6 int v = 1; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 for (int i = 0; i <= N; i++ ) 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 body 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 \{ 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 System.out.println(i + " " + v); 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 v = 2*v; 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 \} 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,51 ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 58 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Nesting 
+\f0\b0\fs29\fsmilli14667 \cf3 \strokec3 The 
+\fs24 if
+\fs29\fsmilli14667 , 
+\fs24 while
+\fs29\fsmilli14667 , and 
+\fs24 for
+\fs29\fsmilli14667  statements have the same status as assignment 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 statements or any other statements in Java. That is, we can use them whenever a 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 statement is called for. In particular, we can use one or more of them in the 
+\fs24 <body> \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 of another to make compound statements. As a fifirst example, 
+\fs24 DivisorPattern \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.4) has a 
+\fs24 for
+\fs29\fsmilli14667  loop whose statements are a 
+\fs24 for
+\fs29\fsmilli14667  loop (whose statement 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 is an 
+\fs24 if
+\fs29\fsmilli14667  statement) and a print statement. It prints a pattern of asterisks where the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ith row has an asterisk in each position corresponding to divisors of i (the same 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 holds true for the columns). 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 To emphasize the nesting, we use indentation in the program code. We refer 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 to the 
+\fs24 i
+\fs29\fsmilli14667  loop as the outer loop and the 
+\fs24 j
+\fs29\fsmilli14667  loop as the inner loop. The inner loop iter
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ates all the way through for each iteration of the outer loop. As usual, the best way 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 to understand a new programming construct like this is to study a trace. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 DivisorPattern
+\fs29\fsmilli14667  has a complicated control structure, as you can see from its 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 flflowchart. A diagram like this illustrates the importance of using a limited num
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ber of simple control structures in programming. With nesting, you can compose 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 loops and conditionals to build programs that are easy to understand even though 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 they may have a complicated control structure. A great many useful computations 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 can be accomplished with just one or two levels of nesting. For example, many pro
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 grams in this book have the same general structure as 
+\fs24 DivisorPattern
+\fs29\fsmilli14667 . 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 i <= N ? 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf3 \strokec3 i = 1; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Flowchart for 
+\fs21\fsmilli10667 DivisorPattern 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf4 \strokec4 no 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf4 \strokec4 yes 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 j <= N ? 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf3 \strokec3 j = 1; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf4 \strokec4 yes 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 j++; 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf4 \strokec4 no 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 i++; 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf3 \strokec3 (i % j == 0) || (j % i == 0) ? 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf3 \strokec3 System.out.print("* "); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf4 \strokec4 yes no 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18\fsmilli9333 \cf3 \strokec3 System.out.print(" "); 
+\fs24 \cf2 \strokec2 \
+
+\fs18\fsmilli9333 \cf3 \strokec3 System.out.println(i); 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,59 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 59 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java DivisorPattern 3 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * 1 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * 3 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java DivisorPattern 16 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * * * * * * * * * * * * 1 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * * * * * 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * * 3 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * * 4 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * 5 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * 6 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * 7 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * 8 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * 9 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * 10 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * 11 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * * 12 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * 13 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * 14 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * 15 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 * * * * * 16 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Program 1.3.4 Your fifirst nested loops 
+\f0\b0\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 public class DivisorPattern \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 public static void main(String[] args) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print a square that visualizes divisors. \cf2 \strokec2 \
+\cf3 \strokec3 int N = Integer.parseInt(args[0]); \cf2 \strokec2 \
+\cf3 \strokec3 for (int i = 1; i <= N; i++) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print the ith line \cf2 \strokec2 \
+\cf3 \strokec3 for (int j = 1; j <= N; j++) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Print the jth entry in the ith line. \cf2 \strokec2 \
+\cf3 \strokec3 if ((i % j == 0) || (j % i == 0)) \cf2 \strokec2 \
+\cf3 \strokec3 System.out.print("* "); \cf2 \strokec2 \
+\cf3 \strokec3 else \cf2 \strokec2 \
+\cf3 \strokec3 System.out.print(" "); \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println(i); \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 This program takes an integer 
+\fs21\fsmilli10667 N
+\fs26\fsmilli13333  as the command-line argument and uses nested 
+\fs21\fsmilli10667 for
+\fs26\fsmilli13333  loops to 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 print an 
+\fs21\fsmilli10667 N
+\fs26\fsmilli13333 -by-
+\fs21\fsmilli10667 N
+\fs26\fsmilli13333  table with an asterisk in row 
+\fs21\fsmilli10667 i
+\fs26\fsmilli13333  and column 
+\fs21\fsmilli10667 j
+\fs26\fsmilli13333  if either 
+\fs21\fsmilli10667 i
+\fs26\fsmilli13333  divides 
+\fs21\fsmilli10667 j
+\fs26\fsmilli13333  or 
+\fs21\fsmilli10667 j
+\fs26\fsmilli13333  divides 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 i
+\fs26\fsmilli13333 . The loop control variables 
+\fs21\fsmilli10667 i
+\fs26\fsmilli13333  and 
+\fs21\fsmilli10667 j
+\fs26\fsmilli13333  control the computation. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 N 
+\fs24 \cf4 \strokec4 number of rows \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 and columns \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 i 
+\fs24 \cf4 \strokec4 row index \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 j 
+\fs24 \cf4 \strokec4 column index \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 i j i % j j % i 
+\fs24 output \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 1 0 0 * 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 2 1 0 * 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 3 1 0 *
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 1 0 1 * 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 2 0 0 * 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 3 2 1 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3 1 0 1 * 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3 2 1 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3 3 0 0 *
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 3 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Trace of 
+\fs21\fsmilli10667 java DivisorPattern 3 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,53 ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 60 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 As a second example of nesting, consider the following program fragment, 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 which a tax preparation program might use to compute income tax rates: 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 if (income < 0) rate = 0.0; \cf2 \strokec2 \
+\cf3 \strokec3 else if (income < 47450) rate = .22; \cf2 \strokec2 \
+\cf3 \strokec3 else if (income < 114650) rate = .25; \cf2 \strokec2 \
+\cf3 \strokec3 else if (income < 174700) rate = .28; \cf2 \strokec2 \
+\cf3 \strokec3 else if (income < 311950) rate = .33; \cf2 \strokec2 \
+\cf3 \strokec3 else rate = .35; \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 In this case, a number of 
+\fs24 if
+\fs29\fsmilli14667  statements are nested to test from among a number 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 of mutually exclusive possibilities. This construct is a special one that we use often. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Otherwise, it is best to use braces to resolve ambiguities when nesting 
+\fs24 if
+\fs29\fsmilli14667  state
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ments. This issue and more examples are addressed in the Q&A and exercises. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Applications 
+\f0\b0\fs29\fsmilli14667 \cf3 \strokec3 The ability to program with loops immediately opens up the full 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 world of computation. To emphasize this fact, we next consider a variety of exam
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ples. These examples all involve working with the types of data that we considered 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 in S
+\fs20\fsmilli10267 ECTION
+\fs29\fsmilli14667  1.2, but rest assured that the same mechanisms serve us well for any 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 computational application. The sample programs are carefully crafted, and by 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 studying and appreciating them, you will be prepared to write your own programs 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 containing loops, as requested in many of the exercises at the end of this section. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 The examples that we consider here involve computing with numbers. Sev
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 eral of our examples are tied to problems faced by mathematicians and scientists 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 throughout the past several centuries. While computers have existed for only 50 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 years or so, many of the computational methods that we use are based on a rich 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 mathematical tradition tracing back to antiquity. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \strokec4 Finite sum. 
+\fs29\fsmilli14667 \cf3 \strokec3 The computational paradigm used by 
+\fs24 PowersOfT\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 wo
+\fs29\fsmilli14667  is one that you will use frequently. It uses two variables\'e2\'80\'94one 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 as an index that controls a loop and the other to accumulate a 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 computational result. 
+\fs24 Harmonic
+\fs29\fsmilli14667  (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.5) uses the same 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 paradigm to evaluate the fifinite sum H
+\fs19\fsmilli9680 N
+\fs29\fsmilli14667  = 1 + 1/2 + 1/3 + ... + 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 1/N. These numbers, which are known as the Harmonic num
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 bers, arise frequently in discrete mathematics. Harmonic numbers are the discrete 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 analog of the logarithm. They also approximate the area under the curve y = 1/x. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 You can use P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.5 as a model for computing the values of other sums (see 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 E
+\fs20\fsmilli10267 XERCISE
+\fs29\fsmilli14667  1.3.16). 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs10\fsmilli5357 \cf4 \strokec4 1/2 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs13\fsmilli6700 \cf4 \strokec4 1 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs10\fsmilli5357 \cf4 \strokec4 1/3 
+\fs24 \cf2 \strokec2 \
+
+\fs10\fsmilli5357 \cf4 \strokec4 1/4 
+\fs24 \cf2 \strokec2 \
+
+\fs10\fsmilli5357 \cf4 \strokec4 1/5 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,82 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 61 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \strokec4 Computing the square root. 
+\fs29\fsmilli14667 \cf3 \strokec3 How are functions in Java\'e2\'80\'99s 
+\fs24 Math
+\fs29\fsmilli14667  li
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 brary, such as 
+\fs24 Math.sqrt()
+\fs29\fsmilli14667 , implemented? 
+\fs24 Sqrt
+\fs29\fsmilli14667  (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.6) 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 illustrates one technique. To compute the square root function, it 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 uses an iterative computation that was known to the Babylonians 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 over 4,000 years ago. It is also a special case of a general com
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 putational technique that was developed in the 17th century by 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Isaac Newton and Joseph Raphson and is widely known as New
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ton\'e2\'80\'99s method. Under generous conditions on a given function f(x), 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Newton\'e2\'80\'99s method is an effective way to fifind roots (values of x for 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 which the function is 0). Start with an initial estimate, t
+\fs19\fsmilli9680 0
+\fs29\fsmilli14667 . Given the 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Harmonic 2 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1.5 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Harmonic 10 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 2.9289682539682538 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Harmonic 10000 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 9.787606036044348 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Program 1.3.5 Harmonic numbers 
+\f0\b0\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 public class Harmonic \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 public static void main(String[] args) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Compute the Nth Harmonic number. \cf2 \strokec2 \
+\cf3 \strokec3 int N = Integer.parseInt(args[0]); \cf2 \strokec2 \
+\cf3 \strokec3 double sum = 0.0; \cf2 \strokec2 \
+\cf3 \strokec3 for (int i = 1; i <= N; i++) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Add the ith term to the sum \cf2 \strokec2 \
+\cf3 \strokec3 sum += 1.0/i; \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println(sum); \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 This program computes the value of the Nth Harmonic number. The value is known from math
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 ematical analysis to be about ln(N) + 0.57721 for large N. Note that ln(10000) ! 9.21034. 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 N 
+\fs24 \cf4 \strokec4 number of terms in sum \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 i 
+\fs24 \cf4 \strokec4 loop index \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 sum 
+\fs24 \cf4 \strokec4 cumulated sum \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 y = f(x) 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 root 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 t 
+\fs12\fsmilli6219 i+2 
+\fs21\fsmilli10667 t 
+\fs12\fsmilli6219 i+1 
+\fs21\fsmilli10667 t
+\fs12\fsmilli6219 i 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Newton\'e2\'80\'99s method 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,8: ./01/23,,,0425,67
+\f1\b\fs24 \cf3 \strokec3 62 
+\f0\b0\fs26\fsmilli13333 Elements of Programming 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Sqrt 2.0 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1.414213562373095 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 % java Sqrt 2544545 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 1595.1630010754388 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 estimate t
+\fs19\fsmilli9680 i
+\fs29\fsmilli14667 , compute 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 a new estimate by 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 drawing a line tan
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 gent to the curve y 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 = f(x) at the point (t
+\fs19\fsmilli9680 i 
+\fs29\fsmilli14667 , f(t
+\fs19\fsmilli9680 i 
+\fs29\fsmilli14667 )) and set t
+\fs19\fsmilli9680 i+1 
+\fs29\fsmilli14667 to the x-coordinate of the point where that 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 line hits the x-axis. Iterating this process, we get closer to the root. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Computing the square root of a positive number c is equivalent to fifinding the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 positive root of the function f(x) = x 
+\fs19\fsmilli9680 2
+\fs29\fsmilli14667  - c. For this special case, Newton\'e2\'80\'99s method 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 amounts to the process implemented in 
+\fs24 Sqrt 
+\fs29\fsmilli14667 (see E
+\fs20\fsmilli10267 XERCISE
+\fs29\fsmilli14667  1.3.17). Start with the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 estimate t = c. If t is equal to c/t, then t is equal to the square root of c, so the com
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 putation is complete. If not, refifine the estimate by replacing t with the average of t 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs32 \cf4 \strokec4 Program 1.3.6 Newton\'e2\'80\'99s method 
+\f0\b0\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 public class Sqrt \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 public static void main(String[] args) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf2 \strokec2 \
+\cf3 \strokec3 double c = Double.parseDouble(args[0]); \cf2 \strokec2 \
+\cf3 \strokec3 double epsilon = 1e-15; \cf2 \strokec2 \
+\cf3 \strokec3 double t = c; \cf2 \strokec2 \
+\cf3 \strokec3 while (Math.abs(t - c/t) > epsilon * t) \cf2 \strokec2 \
+\cf3 \strokec3 \{ \cf5 \strokec5 // Replace t by the average of t and c/t. \cf2 \strokec2 \
+\cf3 \strokec3 t = (c/t + t) / 2.0; \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 System.out.println(t); \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\cf3 \strokec3 \} \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 This program computes the square root of its command-line argument to 15 decimal places of 
+\fs24 \cf2 \strokec2 \
+
+\fs26\fsmilli13333 \cf4 \strokec4 accuracy, using Newton\'e2\'80\'99s method (see text). 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 c 
+\fs24 \cf4 \strokec4 argument \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 epsilon 
+\fs24 \cf4 \strokec4 error tolerance \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf3 \strokec3 t 
+\fs24 \cf4 \strokec4 estimate of c \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 iteration 
+\fs21\fsmilli10667 t c/t 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf3 \strokec3 2.0000000000000000 1.0 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21\fsmilli10667 \cf4 \strokec4 1 \cf3 \strokec3 1.5000000000000000 1.3333333333333333 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 2 \cf3 \strokec3 1.4166666666666665 1.4117647058823530 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 3 \cf3 \strokec3 1.4142156862745097 1.4142114384748700 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 4 \cf3 \strokec3 1.4142135623746899 1.4142135623715002 
+\fs24 \cf2 \strokec2 \
+
+\fs21\fsmilli10667 \cf4 \strokec4 5 \cf3 \strokec3 1.4142135623730950 1.4142135623730951 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26\fsmilli13333 \cf4 \strokec4 Trace of 
+\fs21\fsmilli10667 java Sqrt 2.0 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs16 \cf2 !"#$%&'(')!"*+,,,80 ./01/23,,,0425,67
+\f0\fs26\fsmilli13333 \cf3 \strokec3 1.3 Conditionals and Loops 
+\f1\b\fs24 63 
+\f0\b0 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 and c/t. With Newton\'e2\'80\'99s method, we get the value of the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 square root of 2 accurate to 15 places in just 5 iterations 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 of the loop. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Newton\'e2\'80\'99s method is important in scientifific com
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 puting because the same iterative approach is effec
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 tive for fifinding the roots of a broad class of functions, 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 including many for which analytic solutions are not 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 known (so the Java 
+\fs24 Math
+\fs29\fsmilli14667  library would be no help). 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 Nowadays, we take for granted that we can fifind what
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ever values we need of mathematical functions; before 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 computers, scientists and engineers had to use tables or 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 computed values by hand. Computational techniques 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 that were developed to enable calculations by hand 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 needed to be very effificient, so it is not surprising that 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 many of those same techniques are effective when we 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 use computers. Newton\'e2\'80\'99s method is a classic example of 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 this phenomenon. Another useful approach for evalu
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ating mathematical functions is to use Taylor series ex
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 pansions (see E
+\fs20\fsmilli10267 XERCISES
+\fs29\fsmilli14667  1.3.35\'e2\'80\'9336). 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf4 \strokec4 Number conversion. 
+\fs24 \cf3 \strokec3 Binary
+\fs29\fsmilli14667  (P
+\fs20\fsmilli10267 ROGRAM
+\fs29\fsmilli14667  1.3.7) prints 
+\fs24 \cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf3 \strokec3 the binary (base 2) representation of the decimal num
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 ber typed as the command-line argument. It is based on 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 decomposing a number into a sum of powers of two. 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 For example, the binary representation of 19 is 
+\fs24 10011
+\fs29\fsmilli14667 , 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 which is the same as saying that 19 = 16 + 2 + 1. To 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 compute the binary representation of 
+\fs24 N
+\fs29\fsmilli14667 , we consider the 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 powers of 2 less than or equal to 
+\fs24 N
+\fs29\fsmilli14667  in decreasing order 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 to determine which belong in the binary decomposi
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 tion (and therefore correspond to a 1 bit in the binary 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 representation). The process corresponds precisely to 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 using a balance scale to weigh an object, using weights 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 whose values are powers of two. First, we fifind largest 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 weight not heavier than the object. Then, considering 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 the weights in decreasing order, we add each weight to 
+\fs24 \cf2 \strokec2 \
+
+\fs29\fsmilli14667 \cf3 \strokec3 test whether the object is lighter. If so, we remove the 
+\fs24 \cf2 \strokec2 \
+}
