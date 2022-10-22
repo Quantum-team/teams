@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.first.mapper.BrandMapper">
+    <resultMap id="brandResultMap" type="brand">
+        <result column="id" property="id"></result>
+        <result column="brand_name" property="brand_name"></result>
+        <result column="company_name" property="company_name"></result>
+        <result column="ordered" property="ordered"></result>
+        <result column="description" property="description"></result>
+        <result column="status" property="status"></result>
+    </resultMap>
+</mapper>

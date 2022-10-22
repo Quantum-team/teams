@@ -1,0 +1,8 @@
+com\first\service\BrandService.class
+com\first\web\selectAllServlet.class
+com\first\web\updateServlet.class
+com\first\mapper\BrandMapper.class
+com\first\web\selectByIdServlet.class
+com\first\util\SqlSessionFactoryUtils.class
+com\first\pojo\Brand.class
+com\first\web\addServlet.class
